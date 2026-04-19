@@ -9,8 +9,8 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #0f0f0f;
-      color: #e8e8e8;
+      background: #f4f3f0;
+      color: #1a1a1a;
       line-height: 1.6;
       padding: 3rem 1.5rem 5rem;
     }
@@ -23,13 +23,13 @@
     h1 {
       font-size: 2rem;
       font-weight: 500;
-      color: #ffffff;
+      color: #111;
       margin-bottom: 0.25rem;
     }
 
     .subtitle {
       font-size: 0.9rem;
-      color: #888;
+      color: #777;
       margin-bottom: 2.5rem;
     }
 
@@ -38,7 +38,7 @@
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #555;
+      color: #aaa;
       margin-bottom: 0.85rem;
     }
 
@@ -55,17 +55,25 @@
       padding: 3px 11px;
       border-radius: 20px;
     }
-    .tag-purple { background: #1e1b3a; color: #a89cf7; }
-    .tag-teal   { background: #0d2620; color: #4ecba5; }
-    .tag-amber  { background: #231a08; color: #d4a037; }
-    .tag-gray   { background: #1a1a1a; color: #888; }
-    .tag-coral  { background: #2a1208; color: #e07050; }
+
+    /* SQL family — blue */
+    .tag-sql    { background: #ddeeff; color: #1a4a80; }
+    /* Cloud — teal */
+    .tag-cloud  { background: #d6f5ec; color: #0a5c42; }
+    /* Python family — amber */
+    .tag-python { background: #fef3d0; color: #7a4f00; }
+    /* Microsoft — coral */
+    .tag-ms     { background: #fde8e0; color: #8b2a10; }
+    /* Git & Confluence — purple */
+    .tag-collab { background: #eeecfd; color: #3b2d8f; }
+    /* Other — gray */
+    .tag-other  { background: #ebebeb; color: #555; }
 
     .projects { display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 3rem; }
 
     .card {
-      background: #161616;
-      border: 0.5px solid #2a2a2a;
+      background: #ffffff;
+      border: 0.5px solid #e0dedd;
       border-radius: 14px;
       padding: 1.4rem 1.4rem 1.4rem 1.6rem;
       position: relative;
@@ -94,19 +102,19 @@
     .card-title {
       font-size: 0.95rem;
       font-weight: 500;
-      color: #f0f0f0;
+      color: #111;
     }
 
     .card-year {
       font-size: 0.72rem;
-      color: #555;
+      color: #bbb;
       white-space: nowrap;
       padding-top: 2px;
     }
 
     .card-body {
       font-size: 0.82rem;
-      color: #888;
+      color: #666;
       line-height: 1.7;
       margin-bottom: 1rem;
     }
@@ -119,7 +127,7 @@
     }
 
     .metric {
-      background: #0f0f0f;
+      background: #f4f3f0;
       border-radius: 8px;
       padding: 10px 12px;
     }
@@ -127,13 +135,13 @@
     .metric-val {
       font-size: 1rem;
       font-weight: 500;
-      color: #e8e8e8;
+      color: #111;
       line-height: 1.2;
     }
 
     .metric-label {
       font-size: 0.68rem;
-      color: #555;
+      color: #aaa;
       margin-top: 3px;
     }
 
@@ -143,32 +151,32 @@
       display: inline-block;
       margin-top: 0.85rem;
       font-size: 0.75rem;
-      color: #555;
+      color: #aaa;
       text-decoration: none;
-      border: 0.5px solid #2a2a2a;
+      border: 0.5px solid #ddd;
       border-radius: 7px;
       padding: 4px 11px;
       transition: color 0.15s, border-color 0.15s;
     }
-    .gh-link:hover { color: #aaa; border-color: #444; }
+    .gh-link:hover { color: #444; border-color: #aaa; }
 
     .contact {
       padding-top: 2rem;
-      border-top: 0.5px solid #222;
+      border-top: 0.5px solid #e0dedd;
     }
 
     .contact-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 0.85rem; }
 
     .contact-link {
       font-size: 0.82rem;
-      color: #888;
+      color: #666;
       text-decoration: none;
-      border: 0.5px solid #2a2a2a;
+      border: 0.5px solid #ddd;
       border-radius: 8px;
       padding: 7px 18px;
       transition: color 0.15s, border-color 0.15s;
     }
-    .contact-link:hover { color: #e8e8e8; border-color: #555; }
+    .contact-link:hover { color: #111; border-color: #aaa; }
 
     @media (max-width: 480px) {
       h1 { font-size: 1.5rem; }
@@ -184,22 +192,26 @@
 
   <p class="section-label">Stack</p>
   <div class="stack">
-    <span class="tag tag-coral">Redshift</span>
-    <span class="tag tag-coral">SparkSQL</span>
-    <span class="tag tag-coral">PySpark</span>
-    <span class="tag tag-coral">Dataiku</span>
-    <span class="tag tag-teal">Python</span>
-    <span class="tag tag-teal">Polars</span>
-    <span class="tag tag-teal">Pandas</span>
-    <span class="tag tag-teal">PyArrow</span>
-    <span class="tag tag-amber">Power BI</span>
-    <span class="tag tag-amber">Power Automate</span>
-    <span class="tag tag-gray">SQL</span>
-    <span class="tag tag-gray">SQL Server</span>
-    <span class="tag tag-gray">Git</span>
-    <span class="tag tag-gray">Confluence</span>
-    <span class="tag tag-gray">Databricks</span>
-    <span class="tag tag-gray">Postman</span>
+    <span class="tag tag-sql">Redshift</span>
+    <span class="tag tag-sql">SparkSQL</span>
+    <span class="tag tag-sql">SQL Server</span>
+    <span class="tag tag-sql">MySQL</span>
+    <span class="tag tag-sql">T-SQL</span>
+    <span class="tag tag-cloud">Databricks</span>
+    <span class="tag tag-cloud">AWS</span>
+    <span class="tag tag-cloud">GCP</span>
+    <span class="tag tag-python">Python</span>
+    <span class="tag tag-python">PySpark</span>
+    <span class="tag tag-python">Polars</span>
+    <span class="tag tag-python">Pandas</span>
+    <span class="tag tag-python">PyArrow</span>
+    <span class="tag tag-ms">Power BI</span>
+    <span class="tag tag-ms">Power Automate</span>
+    <span class="tag tag-ms">Excel</span>
+    <span class="tag tag-collab">Git</span>
+    <span class="tag tag-collab">Confluence</span>
+    <span class="tag tag-other">Dataiku</span>
+    <span class="tag tag-other">Postman</span>
   </div>
 
   <p class="section-label">Projetos</p>
@@ -218,12 +230,12 @@
         <div class="metric"><div class="metric-val">3–4 meses</div><div class="metric-label">Tempo de entrega</div></div>
       </div>
       <div class="card-tags">
-        <span class="tag tag-coral">Redshift</span>
-        <span class="tag tag-coral">SparkSQL</span>
-        <span class="tag tag-coral">PySpark</span>
-        <span class="tag tag-coral">Dataiku</span>
-        <span class="tag tag-gray">Git</span>
-        <span class="tag tag-gray">Confluence</span>
+        <span class="tag tag-sql">Redshift</span>
+        <span class="tag tag-sql">SparkSQL</span>
+        <span class="tag tag-python">PySpark</span>
+        <span class="tag tag-other">Dataiku</span>
+        <span class="tag tag-collab">Git</span>
+        <span class="tag tag-collab">Confluence</span>
       </div>
     </div>
 
@@ -240,10 +252,10 @@
         <div class="metric"><div class="metric-val">Operacional</div><div class="metric-label">Nível do impacto</div></div>
       </div>
       <div class="card-tags">
-        <span class="tag tag-amber">Power BI</span>
-        <span class="tag tag-coral">Redshift</span>
-        <span class="tag tag-coral">Dataiku</span>
-        <span class="tag tag-gray">SQL Server</span>
+        <span class="tag tag-ms">Power BI</span>
+        <span class="tag tag-sql">Redshift</span>
+        <span class="tag tag-other">Dataiku</span>
+        <span class="tag tag-sql">SQL Server</span>
       </div>
     </div>
 
@@ -260,10 +272,9 @@
         <div class="metric"><div class="metric-val">Diretoria</div><div class="metric-label">Nível do impacto</div></div>
       </div>
       <div class="card-tags">
-        <span class="tag tag-amber">Power BI</span>
-        <span class="tag tag-gray">Databricks</span>
-        <span class="tag tag-gray">Postman</span>
-        <span class="tag tag-gray">API REST</span>
+        <span class="tag tag-ms">Power BI</span>
+        <span class="tag tag-cloud">Databricks</span>
+        <span class="tag tag-other">Postman</span>
       </div>
     </div>
 
@@ -279,11 +290,10 @@
         <div class="metric"><div class="metric-val">4</div><div class="metric-label">Combinações testadas</div></div>
       </div>
       <div class="card-tags">
-        <span class="tag tag-teal">Python</span>
-        <span class="tag tag-teal">Polars</span>
-        <span class="tag tag-teal">Pandas</span>
-        <span class="tag tag-teal">Parquet</span>
-        <span class="tag tag-teal">PyArrow</span>
+        <span class="tag tag-python">Python</span>
+        <span class="tag tag-python">Polars</span>
+        <span class="tag tag-python">Pandas</span>
+        <span class="tag tag-python">PyArrow</span>
       </div>
       <a class="gh-link" href="https://github.com/juliocesar2003-data/otimizacao_parquet" target="_blank">Ver código no GitHub →</a>
     </div>
@@ -293,8 +303,8 @@
   <div class="contact">
     <p class="section-label">Links e formas de contato</p>
     <div class="contact-links">
-      <a class="contact-link" href="#">LinkedIn</a>
-      <a class="contact-link" href="#">GitHub</a>
+      <a class="contact-link" href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
+      <a class="contact-link" href="https://github.com/juliocesar2003-data" target="_blank">GitHub</a>
     </div>
   </div>
 
