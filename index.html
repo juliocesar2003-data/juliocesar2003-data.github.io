@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Júlio César Estevam Miranda — Portfólio</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #e8e8e8;
+      line-height: 1.6;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 0.85rem;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 3rem;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 3px 11px;
+      border-radius: 20px;
+    }
+    .tag-purple { background: #1e1b3a; color: #a89cf7; }
+    .tag-teal   { background: #0d2620; color: #4ecba5; }
+    .tag-amber  { background: #231a08; color: #d4a037; }
+    .tag-gray   { background: #1a1a1a; color: #888; }
+    .tag-coral  { background: #2a1208; color: #e07050; }
+
+    .projects { display: flex; flex-direction: column; gap: 1.25rem; margin-bottom: 3rem; }
+
+    .card {
+      background: #161616;
+      border: 0.5px solid #2a2a2a;
+      border-radius: 14px;
+      padding: 1.4rem 1.4rem 1.4rem 1.6rem;
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      border-radius: 14px 0 0 14px;
+    }
+    .card-coral::before  { background: #D85A30; }
+    .card-amber::before  { background: #BA7517; }
+    .card-purple::before { background: #534AB7; }
+    .card-teal::before   { background: #1D9E75; }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+      gap: 1rem;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #f0f0f0;
+    }
+
+    .card-year {
+      font-size: 0.72rem;
+      color: #555;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+
+    .card-body {
+      font-size: 0.82rem;
+      color: #888;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .metric {
+      background: #0f0f0f;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .metric-val {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #e8e8e8;
+      line-height: 1.2;
+    }
+
+    .metric-label {
+      font-size: 0.68rem;
+      color: #555;
+      margin-top: 3px;
+    }
+
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+
+    .gh-link {
+      display: inline-block;
+      margin-top: 0.85rem;
+      font-size: 0.75rem;
+      color: #555;
+      text-decoration: none;
+      border: 0.5px solid #2a2a2a;
+      border-radius: 7px;
+      padding: 4px 11px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .gh-link:hover { color: #aaa; border-color: #444; }
+
+    .contact {
+      padding-top: 2rem;
+      border-top: 0.5px solid #222;
+    }
+
+    .contact-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 0.85rem; }
+
+    .contact-link {
+      font-size: 0.82rem;
+      color: #888;
+      text-decoration: none;
+      border: 0.5px solid #2a2a2a;
+      border-radius: 8px;
+      padding: 7px 18px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .contact-link:hover { color: #e8e8e8; border-color: #555; }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.5rem; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Júlio César Estevam Miranda</h1>
+  <p class="subtitle">Profissional de dados — Engenharia, Inteligência de Negócios e Análise de Dados</p>
+
+  <p class="section-label">Stack</p>
+  <div class="stack">
+    <span class="tag tag-coral">Redshift</span>
+    <span class="tag tag-coral">SparkSQL</span>
+    <span class="tag tag-coral">PySpark</span>
+    <span class="tag tag-coral">Dataiku</span>
+    <span class="tag tag-teal">Python</span>
+    <span class="tag tag-teal">Polars</span>
+    <span class="tag tag-teal">Pandas</span>
+    <span class="tag tag-teal">PyArrow</span>
+    <span class="tag tag-amber">Power BI</span>
+    <span class="tag tag-amber">Power Automate</span>
+    <span class="tag tag-gray">SQL</span>
+    <span class="tag tag-gray">SQL Server</span>
+    <span class="tag tag-gray">Git</span>
+    <span class="tag tag-gray">Confluence</span>
+    <span class="tag tag-gray">Databricks</span>
+    <span class="tag tag-gray">Postman</span>
+  </div>
+
+  <p class="section-label">Projetos</p>
+  <div class="projects">
+
+    <div class="card card-coral">
+      <div class="card-header">
+        <p class="card-title">Migração de CRM: estruturação do core analítico</p>
+        <span class="card-year">2026</span>
+      </div>
+      <p class="card-body">Para viabilizar o desligamento de um CRM legado que rodava exclusivamente em backend, estruturei duas tabelas que substituíram toda a dependência de dados do sistema — eliminando o custo de infra do CRM e evitando o crescimento desnecessário do Data Lake.</p>
+      <p class="card-body">A tabela principal consolida receita, resultado, spread, natureza de operação, datas de boleto e liquidação a partir de mais de 20 fontes. A tabela de clientes unifica porte, status na base, última operação e comercial responsável em um único lugar consumido por Parcerias, Gestão e Comercial.</p>
+      <div class="metrics">
+        <div class="metric"><div class="metric-val">20+</div><div class="metric-label">Fontes integradas</div></div>
+        <div class="metric"><div class="metric-val">~12M</div><div class="metric-label">Linhas históricas</div></div>
+        <div class="metric"><div class="metric-val">3–4 meses</div><div class="metric-label">Tempo de entrega</div></div>
+      </div>
+      <div class="card-tags">
+        <span class="tag tag-coral">Redshift</span>
+        <span class="tag tag-coral">SparkSQL</span>
+        <span class="tag tag-coral">PySpark</span>
+        <span class="tag tag-coral">Dataiku</span>
+        <span class="tag tag-gray">Git</span>
+        <span class="tag tag-gray">Confluence</span>
+      </div>
+    </div>
+
+    <div class="card card-amber">
+      <div class="card-header">
+        <p class="card-title">Otimização de fila de ordens NRT</p>
+        <span class="card-year">2025</span>
+      </div>
+      <p class="card-body">Ordens de pagamento passam por filas de inspeção de segurança ao entrar no sistema. A área responsável precisava acompanhar em qual etapa cada ordem estava parada para responder aos clientes sobre demoras — mas o relatório existente levava 15 minutos para atualizar, gerando estresse operacional constante.</p>
+      <p class="card-body">Reestruturei o pipeline de dados reduzindo o tempo de atualização para 4 minutos e meio, dando à equipe visibilidade quase em tempo real sobre o status das ordens em fila.</p>
+      <div class="metrics">
+        <div class="metric"><div class="metric-val">15 → 4,5 min</div><div class="metric-label">Tempo de atualização</div></div>
+        <div class="metric"><div class="metric-val">70%</div><div class="metric-label">Redução de latência</div></div>
+        <div class="metric"><div class="metric-val">Operacional</div><div class="metric-label">Nível do impacto</div></div>
+      </div>
+      <div class="card-tags">
+        <span class="tag tag-amber">Power BI</span>
+        <span class="tag tag-coral">Redshift</span>
+        <span class="tag tag-coral">Dataiku</span>
+        <span class="tag tag-gray">SQL Server</span>
+      </div>
+    </div>
+
+    <div class="card card-purple">
+      <div class="card-header">
+        <p class="card-title">Visibilidade da distribuição primária de GLP</p>
+        <span class="card-year">2025</span>
+      </div>
+      <p class="card-body">A operação de logística primária não tinha nenhum acompanhamento de dados — ninguém sabia se as entregas entre fornecedor e empresa estavam dentro do prazo. Conectei via API ao sistema de monitoramento de entregas, subi os dados no Databricks e construí um painel no Power BI com indicadores de atraso, tempo médio de entrega e rotas com mais falhas.</p>
+      <p class="card-body">O principal insight foi identificar que a tabela de referência usada para classificar atrasos estava desatualizada — gerando uma percepção falsa de eficiência. Apresentei à diretoria que cerca de 60% das ordens atrasadas não estavam sendo identificadas.</p>
+      <div class="metrics">
+        <div class="metric"><div class="metric-val">~60%</div><div class="metric-label">Atrasos não identificados</div></div>
+        <div class="metric"><div class="metric-val">End-to-End</div><div class="metric-label">Atuação</div></div>
+        <div class="metric"><div class="metric-val">Diretoria</div><div class="metric-label">Nível do impacto</div></div>
+      </div>
+      <div class="card-tags">
+        <span class="tag tag-amber">Power BI</span>
+        <span class="tag tag-gray">Databricks</span>
+        <span class="tag tag-gray">Postman</span>
+        <span class="tag tag-gray">API REST</span>
+      </div>
+    </div>
+
+    <div class="card card-teal">
+      <div class="card-header">
+        <p class="card-title">Otimização de armazenamento: CSV vs. Parquet</p>
+        <span class="card-year">2024</span>
+      </div>
+      <p class="card-body">Análise técnica comparando formatos de arquivo e bibliotecas de processamento para entender o impacto real em custo e performance. Usando o dataset US Accidents (7M+ registros), testei 4 combinações de formato e biblioteca para mapear o trade-off entre velocidade e custo de armazenamento.</p>
+      <div class="metrics">
+        <div class="metric"><div class="metric-val">107s → &lt;1s</div><div class="metric-label">Ganho de performance</div></div>
+        <div class="metric"><div class="metric-val">72%</div><div class="metric-label">Redução de armazenamento</div></div>
+        <div class="metric"><div class="metric-val">4</div><div class="metric-label">Combinações testadas</div></div>
+      </div>
+      <div class="card-tags">
+        <span class="tag tag-teal">Python</span>
+        <span class="tag tag-teal">Polars</span>
+        <span class="tag tag-teal">Pandas</span>
+        <span class="tag tag-teal">Parquet</span>
+        <span class="tag tag-teal">PyArrow</span>
+      </div>
+      <a class="gh-link" href="https://github.com/juliocesar2003-data/otimizacao_parquet" target="_blank">Ver código no GitHub →</a>
+    </div>
+
+  </div>
+
+  <div class="contact">
+    <p class="section-label">Links e formas de contato</p>
+    <div class="contact-links">
+      <a class="contact-link" href="#">LinkedIn</a>
+      <a class="contact-link" href="#">GitHub</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
